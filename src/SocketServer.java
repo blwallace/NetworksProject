@@ -24,7 +24,7 @@ public class SocketServer {
 
         try (
             ServerSocket serverSocket =
-                    new ServerSocket(Integer.parseInt(args[0]));
+                    new ServerSocket(portNum);
             Socket clientSocket = serverSocket.accept();
             PrintWriter out =
                     new PrintWriter(clientSocket.getOutputStream(), true);

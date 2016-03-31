@@ -17,8 +17,9 @@ public class SocketServer {
             System.exit(1);
         }
 
+        // Parse user input. We need the port number
+        String input[] = args[0].split("=");
         // Server acknowledging it receives a port to listen to
-        String input[] = args[0].split(":");
         int portNum = Integer.parseInt(input[input.length-1]);
         System.out.println("Setting up listening on port " + portNum);
 
